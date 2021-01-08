@@ -14,6 +14,7 @@ echo "WORKSPACE PATH: ${GITHUB_WORKSPACE}"
 work = echo "$(pwd)"
 echo "Im in `ls $work`"
 echo "Listado `ls $PWD`"
+echo "Mi github `ls $GITHUB_WORKSPACE`"
 
 
 sh -c "echo my second name is: $INPUT_SECONDNAME"
