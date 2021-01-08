@@ -15,7 +15,7 @@ work = echo "$(pwd)"
 echo "Im in `ls $work`"
 echo "Listado `ls $PWD`"
 echo "Mi github `ls $GITHUB_WORKSPACE`"
-echo "ls de la carpeta test $GITHUB_WORKSPACE/tes"
+echo "ls de la carpeta test: `ls $GITHUB_WORKSPACE/test`"
 
 
 sh -c "echo my second name is: $INPUT_SECONDNAME"
