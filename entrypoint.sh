@@ -11,7 +11,8 @@ echo "NEW NAME: $NAME_NEW"
 echo "NEW NAME: ${NAME_NEW}"
 echo "GITHUB PATH: ${GITHUB_EVENT_PATH}"
 echo "WORKSPACE PATH: ${GITHUB_WORKSPACE}"
-echo "$(pwd)"
+work = echo "$(pwd)"
+echo "I'm in `ls $work`"
 
 
 sh -c "echo my second name is: $INPUT_SECONDNAME"
