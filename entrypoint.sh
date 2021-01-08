@@ -9,6 +9,9 @@ echo "HH $NAME"
 echo "HH ${NAME}"
 echo "NEW NAME: $NAME_NEW"
 echo "NEW NAME: ${NAME_NEW}"
+echo "GITHUB PATH: ${GITHUB_EVENT_PATH}"
+echo "WORKSPACE PATH: ${GITHUB_WORKSPACE}"
+echo "$(pwd)"
 
 
 sh -c "echo my second name is: $INPUT_SECONDNAME"
