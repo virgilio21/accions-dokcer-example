@@ -1,0 +1,64 @@
+dn: cn=DefaultGroup,dc=homie,dc=dev
+objectClass: posixGroup
+cn: DefaultGroup
+gidNumber: 500
+
+dn: ou=Users,dc=homie,dc=dev
+objectclass: organizationalUnit
+ou: Users
+
+dn: cn=admin,ou=Users,dc=homie,dc=dev
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+cn: admin
+gidnumber: 500
+givenname: Administrator
+sn: System
+homedirectory: /home/admin
+mail: admin@homie.mx
+uid: admin
+uidnumber: 1000
+userpassword: {SSHA}uTCXtr5Aa3iq/TLRSclm/04rjB3/WlfA
+
+dn: cn=user1,ou=Users,dc=homie,dc=dev
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+cn: user1
+gidnumber: 500
+givenname: Staff
+sn: User 1
+homedirectory: /home/user1
+mail: user1@homie.mx
+uid: user1
+uidnumber: 1001
+userpassword: {SSHA}WxZwcRysPVwIXwRmZQbdrS+hsIYvWoXs
+
+dn: dc=dss,dc=homie,dc=dev
+associateddomain: homie.dev
+objectclass: dNSDomain
+objectclass: domainRelatedObject
+objectclass: top
+dc: dss
+
+dn: cn=Admins,dc=dss,dc=homie,dc=dev
+objectclass: posixGroup
+objectclass: top
+cn: Admins
+gidnumber: 504
+memberuid: admin
+
+dn: cn=OnlyStaff,dc=dss,dc=homie,dc=dev
+objectclass: posixGroup
+objectclass: top
+cn: OnlyStaff
+gidnumber: 505
+memberuid: user1
+memberuid: admin
+
+dn: cn=Disabled,dc=dss,dc=homie,dc=dev
+objectclass: posixGroup
+objectclass: top
+cn: Disabled
+gidnumber: 506

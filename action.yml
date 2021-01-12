@@ -8,8 +8,7 @@ inputs:
   secondName:
     description: 'test second param'
     required: true
-    default: 'Everthing' 
-  pathAction: "${{ github.workspace }}/test"
+    default: 'Everthing'
 outputs:
   time: # id of output
     description: 'The time we greeted you'

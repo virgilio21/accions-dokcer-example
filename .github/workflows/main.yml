@@ -3,6 +3,15 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
+    container:
+      image: dinkel/openldap
+      env:
+        SLAPD_PASSWORD: development
+        SLAPD_DOMAIN: homie.dev
+      ports:
+        - 389:389
+      options: --user root -v ${{ github.workspace }}/test:/etc/ldap.dist/prepopulate:rw
+      
     name: A job to say hello
     steps:
       # To use this repository's private action,
